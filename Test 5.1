@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+ int arr[100],n,c,d,swap;
+ printf("enter the number of elements: \n");
+ scanf("%d",&n);
+ printf("enter %d integers\n",n);
+ for (c=0;c<n;c++)
+ scanf("%d",&arr[c]);
+ for (c=0;c<n-1;c++)
+ {
+ for(d=0;d<n-c-1;d++)
+ {
+ if (arr[d]>arr[d+1])/* for decreasing order use '<' instead of '>'*/
+ {
+swap =arr[d];
+arr[d]=arr[d+1];
+arr[d+1]=swap;
+}
+}
+}
+printf("sorted list in ascending order:\n");
+for(c=0;c<n;c++)
+printf("%d  ",arr[c]);
+return 0;
+}
+
+OUTPUT:
+enter the number of elements: 
+5
+enter 5 integers
+-2 45 0 11 -9
+sorted list in ascending order:
+-9  -2  0  11  45  
