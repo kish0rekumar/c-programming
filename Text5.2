@@ -1,0 +1,48 @@
+#include<stdio.h>
+int main()
+{
+    int p,c,m,ps,total;
+    float avg;
+    printf("\n Enter the marks in Python=");
+    scanf("\n%d",&p);
+    printf("\n Enter the marks in C programming=");
+    scanf("\n%d",&c);
+    printf("\n Enter the marks in Mathematics=");
+    scanf("\n%d",&m);
+    printf("\n Enter the marks in Physics=");
+    scanf("\n%d",&ps);
+    total=p+c+m+ps;
+    printf("\n Total Marks=%d",total);
+    avg=total/4;
+    printf("\n Average marks=%f",avg);
+    if(avg>75)
+    {
+        printf("\n DISTINCTION");
+    }
+    else if(avg>=60&&avg<75)
+    {
+        printf("\n FIRST DIVISION");
+    }
+    else if(avg>=50&&avg<60)
+    {
+        printf("\n SECOND DIVISION");
+    }
+    else if(avg>=40&&avg<50)
+    {
+        printf("\n THIRD DIVISION");
+    }
+    else
+    {
+        printf("\n FAIL");
+    }
+return 0;
+}
+
+output
+Enter the marks in Python=73
+Enter the marks in C programming=78
+Enter the marks in Mathematics=79
+Enter the marks in Physics=75
+Total Marks=305
+ Average marks=76.000000
+ DISTINCTION
